@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 130vh;
+    background-color: gainsboro;
+}
+h1{
+    width: fit-content;
+   margin-top: 40px;
+   margin-left:min(150em , 36%);
+   font-size: clamp(1.5rem , 3vw , 5rem);
+   background: -moz-linear-gradient(rgb(245, 242, 242) ,  rgb(165, 164, 164));
+   background: -webkit-linear-gradient(rgb(245, 242, 242) ,  rgb(165, 164, 164));
+   background: -o-linear-gradient(rgb(245, 242, 242) , rgb(165, 164, 164));
+   background: -ms-linear-gradient(rgb(245, 242, 242) ,  rgb(165, 164, 164));
+   color: rgb(36, 96, 136);
+}
+.container{
+    width: 80%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns:repeat(3 , 1fr) ;
+    grid-template-rows: repeat(2 , 2fr);
+    gap: 15px;
+   margin-left: 10%;
+   margin-top: 50px;
+}
+h2 {
+  margin-top: 150px;
+}
+h2 , .write , button{
+    color: #fff;
+    line-height: 25px;
+}
+button{
+    background-color:  rgb(36, 96, 136);
+    width: 50px;
+    border-radius: 10px;
+}
+.div1 , .div2 , .div3 , .div4 , .div5 , .div6{
+    background-color: rgb(37, 46, 37);
+     position: relative;
+     border-radius: 20px;
+      transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+} 
+.div1{
+    background:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url(../images/IMG-20250514-WA0026.jpg)center / cover;
+}
+.div2{
+    background:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , url(../images/WhatsApp\ Image\ 2025-05-14\ at\ 20.23.35_a46ddd56.jpg)center / cover;
+}
+.div3{
+    background:   linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,  url(../images/IMG-20250514-WA0030.jpg)center / cover;
+}
+.div4{
+    background:   linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , url(../images/IMG-20250514-WA0028.jpg)center / cover;
+}
+.div5{
+    background:   linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,  url(../images/IMG-20250514-WA0025.jpg)center / cover;
+}
+.div6{
+    background:   linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) , url(../images/WhatsApp\ Image\ 2025-05-14\ at\ 20.04.12_a8373433.jpg)center / cover;
+}
+
+.div1:hover, .div2:hover, .div3:hover, .div4:hover, .div5:hover, .div6:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+#show-price , #cancel{
+    margin-top: 20px;
+    height: 30px;
+    width: 300px;
+    background-color:  rgb(36, 96, 136);
+    color: #fff;
+    border-radius: 10px;
+    display: none;
+    cursor: pointer;
+}
+#cancel{
+  background-color: #fff;
+  color:  rgb(36, 96, 136);
+}
+#input{
+    margin-top: 30px;
+    margin-left: 10%;
+    width: 300px;
+    height: 30px;
+}
+::placeholder{
+    text-align: right;
+}
+#content , #content-price{
+    width: 400px;
+    height: auto;
+    border: 3px solid  rgb(36, 96, 136);
+    display: none;
+    margin-top: 20px;
+}
+#content-price{
+    width: 200px;
+}
+#notfound{
+    color: red;
+    display: none;
+}
+/* /////////////////////////////////////////media////////////////////////////////////////////////////////////// */
+@media(max-width: 750px){
+    .container{
+         grid-template-columns:repeat(2 , 1fr) ;
+        grid-template-rows: repeat(3 , 2fr);
+        gap: 10px;
+    }
+}
+/* ///////////////////////////////////////////////////////////////////////////// */
+@media(max-width: 550px){
+    .container{
+         grid-template-columns:repeat(1 , 200px) ;
+        grid-template-rows: repeat(6 , 200px);
+        gap: 5px;
+        margin-left: 30%;
+    }
+}
